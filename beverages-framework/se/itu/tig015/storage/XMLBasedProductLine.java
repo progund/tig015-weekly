@@ -16,9 +16,12 @@ import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-
 import se.itu.tig015.domain.Product;
-  
+
+/**
+ * An implementation of ProuctLine which parses a local
+ * XML file with the ProductLine from Systembolaget.
+ */
 public class XMLBasedProductLine implements ProductLine {
 
   static final String XML_FILE = "resources/sortiment.xml";
