@@ -26,7 +26,7 @@ public class TestProductLine {
     }
     System.out.println("\n====================\nProducts with > 70% alcohol:");
     List<Product> strongStuff = productLine.getProductsFilteredBy(p -> p.alcohol() > 70.0);
-    Collections.sort(strongStuff, Comparator.comparing(Product::alcohol).reversed());
+    Collections.sort(strongStuff, Product.ALCOHOL_ORDER.reversed());
     for (Product product : strongStuff) {
       System.out.println(product);
     }
