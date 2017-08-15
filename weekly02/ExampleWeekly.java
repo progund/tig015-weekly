@@ -43,7 +43,7 @@ public class ExampleWeekly {
     // Print all products whose name starts with "Pilsner":
     for (Product product : products) {
       if (product.name().startsWith("Pilsner")) {
-        System.out.println(product.name());
+        System.out.println(product);
       }
     }
     /* Example output:
