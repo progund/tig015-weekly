@@ -1,3 +1,3 @@
 #!/bin/bash
 
-javac se/itu/tig015/main/*.java se/itu/tig015/domain/*.java se/itu/tig015/storage/*.java
+javac se/itu/systemet/main/*.java se/itu/systemet/domain/*.java se/itu/systemet/storage/*.java
