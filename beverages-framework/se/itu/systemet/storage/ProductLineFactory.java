@@ -1,9 +1,9 @@
-package se.itu.tig015.storage;
+package se.itu.systemet.storage;
 
 import java.util.function.Predicate;
 import java.util.List;
 
-import se.itu.tig015.domain.Product;
+import se.itu.systemet.domain.Product;
 
 /**
  * Factory class for creating ProductLine objects.

@@ -1,4 +1,4 @@
-package se.itu.tig015.storage;
+package se.itu.systemet.storage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-import se.itu.tig015.domain.Product;
+import se.itu.systemet.domain.Product;
 
 /**
  * An implementation of ProuctLine which parses a local
