@@ -24,7 +24,13 @@ import se.itu.systemet.domain.Product;
  */
 public class XMLBasedProductLine implements ProductLine {
 
-  static final String XML_FILE = "resources/sortiment.xml";
+  static String XML_FILE = "";//"resources/sortiment.xml";
+  static {
+    String file = System.getProperty("sortiment-xml-file");
+    if (file != null) {
+      XML_FILE = file;
+    }
+  }
   static final String PRODUCT = "artikel";
   static final String NAME = "Namn";
   static final String NAME2 = "Namn2";
