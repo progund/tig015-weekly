@@ -1,4 +1,4 @@
-package se.itu.tig015.main;
+package se.itu.systemet.main;
 
 import javax.swing.*;
 import javax.swing.event.*;
@@ -8,8 +8,8 @@ import java.awt.event.*;
 
 import java.util.List;
 
-import se.itu.tig015.domain.Product;
-import se.itu.tig015.storage.*;
+import se.itu.systemet.domain.Product;
+import se.itu.systemet.storage.*;
 
 public class TestSwing {
 

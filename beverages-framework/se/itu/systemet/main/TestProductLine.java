@@ -1,8 +1,8 @@
-package se.itu.tig015.main;
+package se.itu.systemet.main;
 
-import se.itu.tig015.domain.Product;
-import se.itu.tig015.storage.ProductLine;
-import se.itu.tig015.storage.ProductLineFactory;
+import se.itu.systemet.domain.Product;
+import se.itu.systemet.storage.ProductLine;
+import se.itu.systemet.storage.ProductLineFactory;
 
 import java.util.List;
 import java.util.Collections;
