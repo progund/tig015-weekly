@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PATHSEP=":"
-if [[ $OSTYPE == "cygwin" ]] ; then
+if [[ $OS == "Windows_NT" ]] ; then
     PATHSEP=";"
 fi
 
