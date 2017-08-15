@@ -3,6 +3,7 @@
 PATHSEP=":"
 if [[ $OS == "Windows_NT" ]] || [[ $OSTYPE == "cygwin" ]]
 then
+    alias java='java -Dfile.encoding=UTF-8'
     PATHSEP=";"
 fi
 
