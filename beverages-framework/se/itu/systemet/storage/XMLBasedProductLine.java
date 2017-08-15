@@ -83,8 +83,9 @@ public class XMLBasedProductLine implements ProductLine {
             event = eventReader.nextEvent();
             // <namn2> is sometimes empty: <namn2/>
             if (event.isCharacters()) {
-              name += " " + (event.asCharacters().getData());
+              name += " " + (event.asCharacters().getData()).trim();
               name = name.trim();
+              name = name.replace("\n", "");
             }
             continue;
           }
