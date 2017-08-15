@@ -5,7 +5,7 @@ FLAGS=""
 
 if [[ $OS == "Windows_NT" ]] || [[ $OSTYPE == "cygwin" ]]
 then
-    FLAGS='java -Dfile.encoding=UTF-8'
+    FLAGS='-Dfile.encoding=UTF-8'
     PATHSEP=";"
 fi
 
