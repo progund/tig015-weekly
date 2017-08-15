@@ -1,4 +1,4 @@
-package se.itu.tig015.domain;
+package se.itu.systemet.domain;
 
 import java.util.Comparator;
 
