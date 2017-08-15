@@ -10,7 +10,9 @@
  * javac -Dsortiment-xml-file=resources/sortiment.xml -cp systemet.jar:. ExampleWeekly.java
  * Run:
  * java -Dsortiment-xml-file=resources/sortiment.xml -cp systemet.jar:. ExampleWeekly"
- * Or use build and run scripts...
+ * Or use build and run scripts... (requires bash)
+ *
+ * ./build_example_weekly.sh && ./run_example_weekly.sh
  */
 import se.itu.systemet.storage.ProductLineFactory;
 import se.itu.systemet.storage.ProductLine;
