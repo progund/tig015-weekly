@@ -133,17 +133,18 @@ class GUI {
 }
 
 class ProductTableModel extends AbstractTableModel {
-  private String[] columnNames = { "Name", "Alcohol", "Price", "Volume"};
+  private String[] columnNames = { "Name", "Alcohol", "Price", "Volume", "cl alc per SEK"};
   private Object[][] data;
   
   public ProductTableModel(List<Product> products) {
-    data = new Object[products.size()][4];
+    data = new Object[products.size()][5];
     for (int i=0; i<products.size(); i++) {
       Product product = products.get(i);
       data[i][0] = product.name();
       data[i][1] = product.alcohol();
       data[i][2] = product.price();
       data[i][3] = product.volume();
+      data[i][4] = product.alcohol()/100.0 * product.volume()/10 / product.price();
     }
   }
 
