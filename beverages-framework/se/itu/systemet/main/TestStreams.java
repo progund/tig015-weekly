@@ -18,7 +18,10 @@ public class TestStreams {
     List<Product> products = productLine.getAllProducts();
     System.out.println("\n====================\nProducts with > 70% alcohol:");
 
-    products.stream().filter(p -> p.alcohol() > 70.0).collect(Collectors.toList()).forEach(System.out::println);
+    products.stream()
+      .filter(p -> p.alcohol() > 70.0)
+      .collect(Collectors.toList())
+      .forEach(System.out::println);
 
   }
 }
