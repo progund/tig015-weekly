@@ -52,6 +52,9 @@ public class XMLBasedProductLine implements ProductLine {
 
   private List<Product> products;
 
+  // Prevent instantiation from outside this package
+  XMLBasedProductLine() { }
+  
   public List<Product> getProductsFilteredBy(Predicate<Product> predicate) {
     if (products == null) {
       readProductsFromFile();
