@@ -6,7 +6,12 @@ import java.util.List;
 import se.itu.systemet.domain.Product;
 
 /**
- * Factory class for creating ProductLine objects.
+ * <p>Factory class for creating ProductLine objects.</p>
+ * <p>Typical usage:</p>
+ * <pre>
+ * ProductLine productLine = ProductLineFactory.getProductLine();
+ * List<Product> products = productLine.getAllProducts();
+ * </pre>
  */
 public class ProductLineFactory {
 
