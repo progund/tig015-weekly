@@ -19,8 +19,19 @@ import javax.xml.stream.events.XMLEvent;
 import se.itu.systemet.domain.Product;
 
 /**
- * An implementation of ProuctLine which parses a local
- * XML file with the ProductLine from Systembolaget.
+ * <p>An implementation of ProuctLine which parses a local
+ * XML file with the ProductLine from Systembolaget.</p>
+ * <p>The source XML file must be found using the System property "sortiment-xml-file".
+ * A typical way to set the location is to run the system like this: <br/>
+ * <code>java -Dsortiment-xml-file=resources/sortiment.xml ...</code>
+ * </p>
+ * <p>
+ * It is also possible to programmatically set the location of the file: <br/>
+ * <code>System.setProperty("sortiment-xml-file", "resources/sortiment.xml");</code>
+ * </p>
+ * <p>
+ * Of course, the file can be named anything, but we've kept the name from <a href="https://www.systembolaget.se/api/">Systembolaget's open data page</a>, "sortiment.xml".
+ * </p>
  */
 public class XMLBasedProductLine implements ProductLine {
 
