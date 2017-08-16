@@ -10,7 +10,7 @@ import se.itu.systemet.domain.Product;
  * <p>Typical usage:</p>
  * <pre>
  * ProductLine productLine = ProductLineFactory.getProductLine();
- * List<Product> products = productLine.getAllProducts();
+ * List&lt;Product&gt; products = productLine.getAllProducts();
  * </pre>
  */
 public class ProductLineFactory {
