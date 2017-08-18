@@ -16,10 +16,9 @@ public interface ProductLine {
    * satisfies the predicate.</p>
    * <p>Typical usage:</p>
    * <pre>
-   * products.stream()
-   *   .filter(p -> p.alcohol() > 70.0)
-   *   .collect(Collectors.toList())
-   *   .forEach(System.out::println);
+   * ProductLine productLine = ProductLineFactory.getProductLine();
+   * List<Product> products = productLine.getAllProducts();
+   * List<Product> strongStuff = productLine.getProductsFilteredBy(p -> p.alcohol() > 70.0);
    * </pre>
    * <p>Which filters out all Products with an alcohol level over 70.0%</p>
    * @param predicate A Predicate with the criteria for the products to return
