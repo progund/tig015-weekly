@@ -12,7 +12,16 @@ import se.itu.systemet.domain.Product;
 public interface ProductLine {
 
   /**
-   * Returns a List&lt;Product&gt; with all products of the product line that satisfies the predicate.
+   * <p>Returns a List&lt;Product&gt; with all products of the product line that
+   * satisfies the predicate.</p>
+   * <p>Typical usage:</p>
+   * <pre>
+   * products.stream()
+   *   .filter(p -> p.alcohol() > 70.0)
+   *   .collect(Collectors.toList())
+   *   .forEach(System.out::println);
+   * </pre>
+   * <p>Which filters out all Products with an alcohol level over 70.0%</p>
    * @param predicate A Predicate with the criteria for the products to return
    * @return A List&lt;Product&gt; with all the Products that match the predicate
    */
