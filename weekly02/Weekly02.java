@@ -22,7 +22,7 @@ public class Weekly02 {
     ProductLine catalog = ProductLineFactory.getProductLine();
     // Get a list of Product objects from the catalog
     List<Product> products = catalog.getAllProducts();
-    System.out.println("We have a list with " + products.size() + " products");
+    System.out.format("We have a list with %d %s", products.size(), " products\n");
   }
   /* Checks that the XML file is really in resources/sortiment.xml */
   static void checkFile() {
