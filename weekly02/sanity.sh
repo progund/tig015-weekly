@@ -1,11 +1,13 @@
 #!/bin/bash
 
-commands="tidy wget java javac zip unzip"
+commands="tidy wget java javac zip apa unzip"
 
 missing=""
 for command in $commands
 do
-    which $command &> /dev/null && echo "$command OK!" || missing="$missing $command"        
+    echo -n "Checking $command... "
+    which $command &> /dev/null && echo "$command OK!" || missing="$missing $command"
+    [[ "$missing" =~ $command ]] && echo "$command NOT FOUND!"
 done
 if [ "" = "$missing" ]
 then
