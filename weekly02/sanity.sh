@@ -1,6 +1,6 @@
 #!/bin/bash
 
-commands="tidy apa wget java javac zip unzip"
+commands="tidy wget java javac zip unzip"
 
 for command in $commands
 do
