@@ -18,18 +18,26 @@ public class Weekly02 {
   public static void main(String[] args) {
     // Make sure we have the XML file with the products!
     checkFile();
+    
     // Get the ProductLine (Systembolage's all products)
     ProductLine catalog = ProductLineFactory.getProductLine();
+
     // Get a list of Product objects from the catalog
     List<Product> products = catalog.getAllProducts();
-    System.out.format("We have a list with %d %s", products.size(), " products\n");
+
+    for (Product product : products) {
+      System.out.format("%s Pris: %.2f kr\n", product.name(), product.price());
+    }
   }
+  
   /* Checks that the XML file is really in resources/sortiment.xml */
   static void checkFile() {
     if (! new java.io.File("resources/sortiment.xml").exists()) {
       System.err.println("I can't find the resources/sortiment.xml file.");
       System.err.println("You need to make sure you have it!");
-      System.err.println("You can run ./get_latest_file.sh in order to get the latest version of this file, which will end up in the resources/ directory.");
+      System.err.println("You can run ./get_latest_file.sh in order to get" +
+                         " the latest version of this file, which will end" +
+                         " up in the resources/ directory.");
       System.exit(1);
     } else {
       System.setProperty("sortiment-xml-file", "resources/sortiment.xml");
