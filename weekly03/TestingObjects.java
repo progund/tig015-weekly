@@ -10,26 +10,26 @@ public class TestingObjects {
   public static void main(String[] args) {    
     // Your code here...
 
-    // Declare and initialize aProduct
+    // Task 4. Declare and initialize aProduct
 
-    // Declare and initialize anotherProduct
+    // Task 4. Declare and initialize anotherProduct
 
-    // Print aProduct
-    // Print anotherProduct
+    // Task 4. Print aProduct
+    // Task 4. Print anotherProduct
     
-    // Declare and initialize aSimilarProduct
+    // Task 4. Declare and initialize aSimilarProduct
 
-    // Test if aProduct thinks that it is equal to aSimilarProduct
+    // Task 4. Test if aProduct thinks that it is equal to aSimilarProduct
 
-    // Test if anotherProduct is equal to aProduct
+    // Task 4. Test if anotherProduct is equal to aProduct
 
-    // Use the factory to get a ProductLine
+    // Task 5. Use the factory to get a ProductLine
 
-    // Use the ProductLine to get all products as a List<Product>
+    // Task 5. Use the ProductLine to get all products as a List<Product>
 
-    // Loop through all products and if alcohol is greater than 40.0%, print!
+    // Task 5. Loop through all products and if alcohol is greater than 40.0%, print!
 
-    // Loop through all products again and if alcohol is 0.0%, print!
+    // Task 5. Loop through all products again and if alcohol is 0.0%, print!
 
     // Voluntary challenge for those who want more:
     // If args.length is greater than 1 (there is at least one argument),
