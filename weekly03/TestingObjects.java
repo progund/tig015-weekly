@@ -10,28 +10,39 @@ public class TestingObjects {
   public static void main(String[] args) {    
     // Your code here...
 
-    // Task 4. Declare and initialize aProduct
-
-    // Task 4. Declare and initialize anotherProduct
-
-    // Task 4. Print aProduct
-    // Task 4. Print anotherProduct
+    // Task 4. Create some custom project objects
     
-    // Task 4. Declare and initialize aSimilarProduct
+    //  Declare and initialize aProduct
 
-    // Task 4. Test if aProduct thinks that it is equal to aSimilarProduct
+    //  Declare and initialize anotherProduct
 
-    // Task 4. Test if anotherProduct is equal to aProduct
+    //  Next, add two println statements for printing the objects to standard out
+    //   Print aProduct
+    
+    //   Print anotherProduct
 
-    // Task 5. Use the factory to get a ProductLine
+    //  Now, compile and run (see instructions) before moving on with the below...
 
-    // Task 5. Use the ProductLine to get all products as a List<Product>
+    // Next (after the println statements) create a third product
+    //  Declare and initialize aSimilarProduct
 
-    // Task 5. Loop through all products and if alcohol is greater than 40.0%, print!
+    //  Test if aProduct thinks that it is equal to aSimilarProduct
 
-    // Task 5. Loop through all products again and if alcohol is 0.0%, print!
+    //  Test if anotherProduct is equal to aProduct
 
-    // Voluntary challenge for those who want more:
+    // Task 6. Filter products on alcohol level
+    //  Use the factory to get a ProductLine
+
+    //  Use the ProductLine to get all products as a List<Product>
+
+    //  Loop through all products and if alcohol is greater than 40.0%, print!
+
+    //  Loop through all products again and if alcohol is 0.0%, print!
+
+    // You are now finished with this weekly. Well done!
+    
+    // Voluntary extra challenge (for the keen student):
+    // 
     // If args.length is greater than 1 (there is at least one argument),
     // then convert args[0] to a double variable previously declared.
     // Use this variable in the first loop to compare against the loop product's
@@ -48,6 +59,7 @@ public class TestingObjects {
     // Double.parseDouble(...) where the argument is args[0].
     // Change the first loop to use miminumAlcohol in the if-statement which
     // checks whether to print the product or not.
-    // The argument checking etc must be written before the loop!
+    
+    // NOTE: The argument checking etc must be written before the loop!
   }
 }
