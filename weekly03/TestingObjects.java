@@ -43,7 +43,7 @@ public class TestingObjects {
     
     // Voluntary extra challenge (for the keen student):
     // 
-    // If args.length is greater than 1 (there is at least one argument),
+    // If args.length is greater than 0 (there is at least one argument),
     // then convert args[0] to a double variable previously declared.
     // Use this variable in the first loop to compare against the loop product's
     // alcohol value. This allows the user to decide what the minimum alcohol
