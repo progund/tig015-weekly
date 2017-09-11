@@ -14,7 +14,7 @@ then
     mkdir resources
 fi
 echo -e "\n\n"
-wget 'https://www.systembolaget.se/api/assortment/products/xml' -O resources/sortiment.xml
+wget --no-check-certificate  'https://www.systembolaget.se/api/assortment/products/xml' -O resources/sortiment.xml
 echo -e "\nDone fetching xml. Saved as resources/sortiment.xml"
 sleep 1
 echo -e "==========\n"
