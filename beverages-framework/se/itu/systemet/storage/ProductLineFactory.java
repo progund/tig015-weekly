@@ -16,6 +16,13 @@ import se.itu.systemet.domain.Product;
 public class ProductLineFactory {
 
   /**
+   * Prevent instantiation.
+   */
+  private ProductLineFactory() {
+    
+  }
+  
+  /**
    * Creates a ProductLine object.
    * @return A new ProductLine object
    */
