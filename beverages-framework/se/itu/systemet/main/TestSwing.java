@@ -10,19 +10,40 @@ import java.util.List;
 
 import se.itu.systemet.domain.Product;
 import se.itu.systemet.storage.*;
-
+/**
+ * This class is a Java program which fires up a
+ * Swing(tm) GUI (Graphical User Interface) which
+ * displays all the products, read from the XML file
+ * from Systembolaget, and lets the user filter the
+ * products shown in various ways.
+ */
 public class TestSwing {
 
+  /* A so called static initializer (as shown below)
+   * is executed once (only one time) when the class
+   * it belongs to if first loaded by the JVM.
+   *
+   * This particular one, fixes some UI problems
+   * with e.g. Rikard's laptop which uses a really
+   * high resolution and high dpi which otherwise
+   * makes the window and components look really small.
+   *
+   * For other computers, which do not have the capabilities
+   * which we try to use here, nothing happens.
+   */
   static {
     try {
-      // Ignore this - it's a fix for Rikard's computer. Hell Dell!
-            UIManager
-              .setLookAndFeel((LookAndFeel)Class
-                              .forName("com.sun.java.swing.plaf.gtk.GTKLookAndFeel")
-                              .newInstance());
+      // Ignore the lines below - it's a fix for Rikard's computer. Hell Dell!
+      UIManager
+        .setLookAndFeel((LookAndFeel)Class
+                        .forName("com.sun.java.swing.plaf.gtk.GTKLookAndFeel")
+                        .newInstance());
     } catch (Exception ignore) {}
   }
-  
+
+  /* This is the main method, i.e. the starting-point of this
+   * Java program.
+   */
   public static void main(String[] args) {
     javax.swing.SwingUtilities.invokeLater(new Runnable() {
         public void run() {
@@ -32,24 +53,35 @@ public class TestSwing {
   }
 }
 
+/**
+ * This class (should really have been defined in its own
+ * source code file - we apologize) represents a GUI with
+ * a table and some text fields and buttons.
+ */
 class GUI {
-  
-  private JFrame frame;
-  private JPanel panel;
-  private JPanel form;
-  private JTable table;
-  private JTextField alcoField;
+
+  // Instance variables below - mostly Swing components for the UI  
+  private JFrame frame; // this is the actual window
+  private JPanel panel; // a panel is a surface to put other components on
+  private JPanel form;  
+  private JTable table; // A table which looks like a spread sheet, kind of
+  private JTextField alcoField; // input fields
   private JTextField priceField;
+  // An object for sorting a table will be used
   private TableRowSorter<ProductTableModel> sorter;
-  
+
+  // A list containing all the products from Systembolaget
   private List<Product> products;
 
+  // Constructs a new GUI
   public GUI(List<Product> products) {
     this.products = products;
     init();
     show();
   }
-  
+
+  /* This sets up all the components.
+   */
   private void init() {    
     frame = new JFrame("Testing swing table");
     frame.setLayout(new BorderLayout());
@@ -78,6 +110,9 @@ class GUI {
     addListeners();
   }
 
+  /* Here, we register objects which react to events,
+   * to some components.
+   */
   private void addListeners() {
     alcoField.getDocument()
       .addDocumentListener(new DocumentListener() {
@@ -104,7 +139,10 @@ class GUI {
           }
         });    
   }
-
+  // Resets and updates the filter depending on what the
+  // user writes in the text fields
+  // See: https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/uiswing/examples/components/TableFilterDemoProject/src/components/TableFilterDemo.java
+  // Yes, we (Rikard) were heavily influenced and inspired of that code ;-)
   private void newFilter() {
     List<RowFilter<ProductTableModel, Object>> rfs =
       new java.util.ArrayList<>();
@@ -126,12 +164,17 @@ class GUI {
     sorter.setRowFilter(RowFilter.andFilter(rfs));
   }
 
+  // This method makes the window visible
   private void show() {
     frame.pack();
     frame.setVisible(true);
   }
 }
 
+/**
+ * A class representing the contents of a table with products.
+ * See: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
+ */
 class ProductTableModel extends AbstractTableModel {
   private String[] columnNames = { "Name", "Alcohol", "Price", "Volume", "cl alc per SEK"};
   private Object[][] data;
