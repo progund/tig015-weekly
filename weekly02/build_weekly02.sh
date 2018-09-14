@@ -16,4 +16,6 @@ then
     sleep 1
 fi
 javac -cp "systemet.jar${PATHSEP}." Weekly02.java
+RET=$?
 echo -e "==========\n"
+exit $RET
