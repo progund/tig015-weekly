@@ -11,11 +11,11 @@ then
     PATHSEP=";"
 fi
 
-if [ ! -f "systemet.jar" ]
+if [[ ! -f "systemet.jar" ]]
    ./get_latest_jar.sh || bailout "Couldn't get systemet.jar"
 fi
    
-if [ ! -f "systemet.jar" ]
+if [[ ! -f "systemet.jar" ]]
 then
     echo -e "${0}: No jar file found. Fetching...\n"
     ./get_latest_file.sh || bailout "Couldn't get xml file"
