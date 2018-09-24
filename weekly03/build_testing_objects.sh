@@ -12,6 +12,7 @@ then
 fi
 
 if [[ ! -f "systemet.jar" ]]
+then
    ./get_latest_jar.sh || bailout "Couldn't get systemet.jar"
 fi
    
